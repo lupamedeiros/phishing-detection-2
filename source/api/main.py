@@ -230,7 +230,7 @@ async def root():
 async def get_inference(url: Url):
     # Download inferecen artifact
     model_export_path = run.use_artifact(artifact_model_name).file()
-    pipe = joblib.load(model_export_path)
+    model = joblib.load(model_export_path)
 
     # create a dataframe from the input feature
     # note that we could use pd.DataFrame.from_dict
@@ -238,6 +238,6 @@ async def get_inference(url: Url):
     df = pd.DataFrame([url.dict()])
     ds = df_to_dataset(df,shuffle=False)
 
-    predict = pipe.predict(df)  
+    predict = model.predict(ds)  
 
     return "legitm" if predict[0] <= 0.5 else "phishing"
