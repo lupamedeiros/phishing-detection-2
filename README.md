@@ -18,3 +18,7 @@ create and user the correct environment, do as told bellow.
 To exit the envoriment:
 
     conda deactivate
+
+To run the API:
+
+    uvicorn source.api.main:app --reload
