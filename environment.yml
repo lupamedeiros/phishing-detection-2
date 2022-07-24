@@ -1,0 +1,12 @@
+name: phishing-detection
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+ - python=3.8
+ - wandb=0.12.16
+ - pip=21.2.4
+ - pandas
+ - uvicorn
+ - tensorflow
+ - keras
