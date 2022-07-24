@@ -214,15 +214,19 @@ class Url(BaseModel):
 @app.get("/", response_class=HTMLResponse)
 async def root():
     return """
-    <p><span style="font-size:28px"><strong>Hello World<strong></span></p>
+    <html>
+    <p><span style="font-size:28px"><strong>Hello World!\n</strong></span></p>
     <p><span style="font-size:20px">In this project, we will apply the skills
         acquired in the Deployng a Scalable ML Pipeline in Production course to develop
         a classification model on publicly available
-        <a href="https://data.mendeley.com/datasets/c2gw7fy2j4/3> Mendeley Data</a>.</span></p>
+        <a href="https://data.mendeley.com/datasets/c2gw7fy2j4/3"> Mendeley Data. </a>\n</span></p>
+    <br><br>
     <p><span style="font-size:20px">Source code available on
-        <a href="https://github.com/lupamedeiros/phishing-detection-2>github/lupamedeiros/phishing-detection-2</a>.</span></p>
+        <a href="https://github.com/lupamedeiros/phishing-detection-2">github/lupamedeiros/phishing-detection-2. </a></span></p>
+    <br><br>
     <p><span style="font-size:20px">More info available on 
-        <a href="https://github.com/lupamedeiros/phishing-detection-2>Medium article.</a>.</span></p>
+        <a href="https://github.com/lupamedeiros/phishing-detection-2"> Medium article. </a></span></p>
+    </html>
     """
 
 # run the model inferece and use a Url data structure via POST to the API
