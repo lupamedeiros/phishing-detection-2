@@ -19,6 +19,9 @@ To exit the envoriment:
 
     conda deactivate
 
-To run the API:
+## Running the API
+
+The API is developed on FastAPI framework. And executed using uvicorn. To run
+it, type:
 
     uvicorn source.api.main:app --reload
