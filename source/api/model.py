@@ -8,9 +8,8 @@ import tensorflow as tf
 
 def df_to_dataset(dataframe, shuffle=True, batch_size=32):
     dataframe = dataframe.copy()
-    labels = dataframe.pop('target')
     df = {key: value[:,tf.newaxis] for key, value in dataframe.items()}
-    ds = tf.data.Dataset.from_tensor_slices((dict(dataframe), labels))
+    ds = tf.data.Dataset.from_tensor_slices((dict(dataframe), df))
 
     if shuffle:
         ds = ds.shuffle(buffer_size=len(dataframe))
