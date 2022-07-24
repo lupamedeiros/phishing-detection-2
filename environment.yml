@@ -1,4 +1,4 @@
-name: phishing-detection
+name: phishing-detection-2
 channels:
   - conda-forge
   - defaults
