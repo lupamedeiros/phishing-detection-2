@@ -1,0 +1,11 @@
+wandb
+pandas
+pandas-profiling==3.1.0
+pytest
+pytest-sugar
+scikit-learn
+fastapi
+pydantic
+uvicorn
+tensorflow
+keras
