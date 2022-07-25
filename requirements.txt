@@ -6,4 +6,4 @@ joblib
 fastapi
 pydantic
 uvicorn
-tensorflow
+tensorflow-cpu
