@@ -21,6 +21,10 @@ To exit the envoriment:
 
 ## Running the API
 
+In order to test the API we use pytest. From project's root directory enter:
+
+    pytest source/api/
+
 The API is developed on FastAPI framework. And executed using uvicorn. To run
 it, type:
 
