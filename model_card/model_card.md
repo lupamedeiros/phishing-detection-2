@@ -2,37 +2,16 @@
 
 Model cards are a succint approach for documenting the creation, use and
 shortcomings of a model. The idea is to write a documentation such as a
-non-expert can understand the model card's contents. For additional informnation
+non-expert can understand the model card's contents. For additional information
 about Model Card look the paper: https://arxiv.org/pdf/1810.03993.pdf
 
-## Model Details
+## Dataset
 
-Ivanovitch Silva created the model for creating a complete data pipeline using Google Colab, Scikit-Learn and Weights & Bias to train a Decision Tree model. The big-picture of the data pipeline is shown below:
+This project aims to create a MLP model using Tensor Flow Keras to predict if an
+url is legitm or a phishing atempt. It was developed from the following dataset:
+[Web page phishing detection](https://data.mendeley.com/datasets/c2gw7fy2j4/3).
 
-![The Ivanovith's pipeline model.](../images/ivanovicth_workflow.png)
-
-The hyperparameter-tunning was conducted useind a Random Sweep fo WandB and the parameters adopted in train were:
-
-* full_pipeline__num_pipeline__num_transformer__model": 2
-* classifier__criterion": 'gini'
-* "classifier__splitter": 'random'
-* "classifier__random_state": 57
-
-## Intended Use
-
-This Model is used as a proof of concept fot he evaluation of an entire pipeline incorporating Machine Learning fundamentals. The data pipeline is composed of the following steps:
-
-1. [Fetch Data](../source/creating_model/01_fetch_data.ipynb)
-2. [EDA](../source/creating_model/02_eda.ipynb)
-3. [Preprocessing](../source/creating_model/03_preprocessing.ipynb)
-4. [Data Check](../source/creating_model/04_check_data.ipynb)
-5. [Data Segregation](../source/creating_model/05_data_segregation.ipynb)
-6. [Train](../source/creating_model/06_train.ipynb)
-7. [Test](../source/creating_model/07_test.ipynb)
-
-## Training Data
-
-The dataset used in this project is available [Mendeley Data - Web page phishing detection](https://data.mendeley.com/datasets/c2gw7fy2j4/3). The dataset was designed to be used as benchmark for machine learning bases phishing detection systems. Feature are from three different classes:
+The dataset was designed to be used as benchmark for machine learning bases phishing detection systems. Feature are from three different classes:
 
 * 56 extracted from the structure and syntax of URLs;
 * 24 extracted from the content of their correspondent pages; and
@@ -43,13 +22,33 @@ All features on dataset are numeric. After the EDA we found variables `google_in
 ![](../images/google_index.png)
 ![](../images/page_rank.png)
 
-## Evaluation Data
+## Model Details
 
-The dataset under study was splited into Train and Test in the [data segregation step](../source/creating_model/05_data_segregation.ipynb):
-* 70% of the clean data is used to Train;
-* 30% is used to test.
+Ivanovitch Silva created a proccess model for creating a complete data pipeline using Google Colab, Scikit-Learn and Weights & Bias to train a Decision Tree model. In this project, instead of using Scikit-Learning we are using TensorFlow Keras. The big-picture of the data pipeline is shown below:
 
-30% of the Train data is used for validation puposes (hyperparameter-tunning).
+![The Ivanovith's pipeline model.](../images/ivanovicth_workflow.png)
+
+In order to better training and to create a better model, we try some methods to improve training:
+
+* Number of hidden layers;
+* Number of nodes per hidden layer;
+* Batch size (from minibatch to dataset batch size);
+* Loss fuction (Mean Squared Error or Binary Crossentropy);
+* Trainner optimizers (Stochastic Gradient Descent, Adam, RMSProp or Adagrad);
+* Overfit prevenction (L2, Dropout or Weights Constraints); and
+* Weights initilization (zeros or random).
+
+## Intended Use
+
+This Model is used as a proof of concept for the evaluation of an entire pipeline incorporating Machine Learning fundamentals. The data pipeline is composed of the following steps:
+
+1. [Fetch Data](../source/creating_model/01_fetch_data.ipynb)
+2. [EDA](../source/creating_model/02_eda.ipynb)
+3. [Preprocessing](../source/creating_model/03_preprocessing.ipynb)
+4. [Data Check](../source/creating_model/04_check_data.ipynb)
+5. [Data Segregation](../source/creating_model/05_data_segregation.ipynb)
+6. [Train](../source/creating_model/06_train_keras.ipynb)
+7. [Test](../source/creating_model/07_test_keras.ipynb)
 
 ## Metrics
 
