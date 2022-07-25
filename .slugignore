@@ -1,0 +1,4 @@
+# Ignore on Heroku Slug
+
+/data
+/source/creating_model
