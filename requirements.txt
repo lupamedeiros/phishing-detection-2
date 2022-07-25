@@ -2,6 +2,7 @@ wandb
 pandas
 pytest
 pytest-sugar
+joblib
 fastapi
 pydantic
 uvicorn
