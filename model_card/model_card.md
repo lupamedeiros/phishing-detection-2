@@ -60,10 +60,19 @@ In order to follow the perfomance of machine learning experiments, the project m
 
 We got the followin results:
 
+### Sweep Best Model
+
+| Run | Train Accuracy | Val Accuracy | Test Accuracy |
+| --- | --- | --- | --- |
+|Train [restful-sweep-28](https://wandb.ai/lupamedeiros/phishing-detection-2/runs/yx6tvs28) | 0.9850 | 0.9606 | 0.9545 |
+
+### Test Run
+
 | Run | Accuracy | F1 | Precision | Recall |
 | --- | --- | --- | --- | --- |
-|Train [treasured-thunder-35](https://wandb.ai/lupamedeiros/phishing-detection/runs/a8l45v31) | 0.9402 | 0.9403 | 0.9383 | 0.9424 |
-| Test [soltar-star-36](https://wandb.ai/lupamedeiros/phishing-detection/runs/1kkb10ej) | 0.9225 | 0.9226 | 0.9214 | 0.9238 |
+|Train [divine-armadillo-152](https://wandb.ai/lupamedeiros/phishing-detection-2/runs/3oi7tabv) | 0.95407 | 0.95376 | 0.96011 | 0.94751 |
+
+![](../images/confusion_matriz.png)
 
 ## Ethical Considerations
 
