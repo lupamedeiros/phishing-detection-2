@@ -29,3 +29,5 @@ The API is developed on FastAPI framework. And executed using uvicorn. To run
 it, type:
 
     uvicorn source.api.main:app --reload
+
+Information about the model is available at [WandB](https://wandb.ai/lupamedeiros/phishing-detection-2?workspace=user-lupamedeiros).
