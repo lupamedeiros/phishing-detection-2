@@ -25,7 +25,7 @@ In order to test the API we use pytest. From project's root directory enter:
 
     pytest source/api/
 
-The API is developed on FastAPI framework. And executed using uvicorn. To run
+The API is developed on FastAPI framework and executed using uvicorn. To run
 it, type:
 
     uvicorn source.api.main:app --reload
